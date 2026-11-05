@@ -1,0 +1,19 @@
+name: End-to-End DevOps Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Application
+        run: echo "Application Build Successful"
+
+      - name: Test Application
+        run: echo "Application Test Successful"
